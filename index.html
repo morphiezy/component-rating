@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <main>
+
+      <!-- Container Card -->
+
+      <div class="flex justify-center items-center w-[330px] rounded-[15px] p-[25px] sm:w-[410px] min-h-[358px] sm:min-h-[417px] h-auto sm:rounded-[30px] bg-card-gradient sm:p-[35px] overflow-hidden">
+        
+        <!-- Rating Screen -->
+        
+        <div data-screen="rating">
+          <div class="bg-[#262F38] w-[40px] h-[40px] sm:w-[48px] sm:h-[48px] rounded-full flex justify-center items-center">
+            <img src="./assets/images/icon-star.svg" alt="star" class="block w-[14px] h-[13px] sm:w-[16px] sm:h-[16px]">
+          </div>
+          <div class="mt-5 sm:mt-[30px]">
+            <h1 class="text-[#FCFCFF] font-overpass text-2xl sm:text-[26px] font-semibold">How did we do ?</h1>
+            <p class="text-[#767E89] font-overpass text-[14px] font-normal leading-[23px] mt-[10px]">Please let us know how we did with your support  request. All feedback is appreciated to help us improve our offering!</p>
+          </div>
+          <div class="flex justify-between items-center mt-5 sm:mt-[30px]">
+            <button data-rating="1" class="button-rating">1</button>
+            <button data-rating="2" class="button-rating">2</button>
+            <button data-rating="3" class="button-rating">3</button>
+            <button data-rating="4" class="button-rating">4</button>
+            <button data-rating="5" class="button-rating">5</button>
+          </div>
+          <button id="submit" class="w-full h-[45px] sm:h-[46px] bg-orange text-sm text-white uppercase font-bold font-overpass tracking-widest rounded-[40px] mt-5 sm:mt-[30px] hover:bg-white hover:text-orange transition-all duration-300">submit</button>
+        </div>
+
+        <!-- Thank You Screen -->
+
+        <div data-screen="thank-you" class="text-center hidden">
+          <img 
+            src="./assets/images/illustration-thank-you.svg" 
+            alt="illustration"
+            class="block mx-auto w-[145px] h-[100px] sm:w-[165px] sm:-h-[108px] animate-float relative"
+            draggable="false"
+          >
+          <p class="bg-[#262F38] w-min min-w-[180px] sm:min-w-[190px] text-[#BF7541] rounded-3xl py-2 sm:py-[10px] text-sm sm:text-[15px] mt-[30px] mx-auto leading-none font-overpass font-medium">You selected <span id="user-rating" class="leading-none">4</span> out of 5</p>
+          <div class="mt-[30px]">
+            <h1 class="text-[#FCFCFF] font-overpass text-2xl sm:text-[26px] font-semibold">Thank you!</h1>
+            <p class="text-[#767E89] font-overpass text-[14px] font-normal leading-[23px] mt-[10px]">We appreciate you taking the time to give a rating. If you ever need more suppert, don't hesitate to get in touch!</p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+    <script src="./assets/javascript/index.js"></script>
+  </body>
+</html>

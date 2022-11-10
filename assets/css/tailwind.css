@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+
+    body {
+        min-height: 100vh;
+        height: 100%;
+        background-color: theme('colors.dark');
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@layer components {
+
+    .button-rating {
+        @apply flex items-center justify-center bg-[#262F38] w-[40px] h-[40px] rounded-full text-[14px] text-[#767E89] font-overpass font-bold transition-all duration-300
+    }
+
+    .button-rating:hover {
+        @apply text-white bg-orange
+    }
+
+    @media screen and (min-width: theme('screens.sm')) {
+        .button-rating {
+            @apply w-[48px] h-[48px] text-base
+        }
+    }
+
+}
+
+@layer utilities {
+
+    .btn-rating-selected{
+        @apply bg-medium-grey text-white
+    }
+
+}
